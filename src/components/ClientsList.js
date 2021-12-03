@@ -43,9 +43,9 @@ const ClientsList = (props) => {
     }
 
     return (
-        filteredClients.map((filteredClient, index) => {
+        filteredClients.map((filteredClient) => {
             return(
-                <div key={filteredClient.id}>{index} - {filteredClient.firstName} {filteredClient.lastName}</div>
+                <ClientCard key={filteredClient.id} filteredClient={filteredClient}/>
             );
         })
     );
