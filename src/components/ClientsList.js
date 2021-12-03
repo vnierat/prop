@@ -23,9 +23,9 @@ const ClientsList = (props) => {
     let filteredClients = clients.filter((currentClient) => 
         currentClient.search.rooms === property.rooms && currentClient.search.budget >= property.price && currentClient.search.surface <= property.surface
     );
-    // L'ensemble des clients de la liste recherchent des superficies supérieures à l'offre proposée => donc le résultat ne retournera aucun liste de clients potentiels :'(
+    // L'ensemble des clients de la liste recherchent des superficies supérieures à l'offre proposée => donc le résultat ne retournera aucun liste de clients potentiels car l'appartement fait seulement 44m2 de superficie :'(
 
-   
+   //  DONC =>
 
     // On peut alors tenter de trouver les clients dont la recherche se rapproche le plus de l'offre proposée
     if (filteredClients.length === 0) {
