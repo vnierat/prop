@@ -17,11 +17,11 @@ const MainPage = () => {
             <div className="mainPage">
                 <div className="container">
                     <AppartInfos property={property} />
-                    <div className="bold">Potientiels clients intéressés :</div>
+                    <div className="bold">Potentiels clients intéressés :</div>
                     <ClientsList property={property} /> 
                 </div>
             </div>
         </>
-    )
+    );
 }
 export default MainPage;

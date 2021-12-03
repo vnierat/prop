@@ -5,19 +5,18 @@ const ClientsList = (props) => {
     const [clients, setClientsList,] = useState([]);
     const { property } = props;
 
-
     useEffect(()=>{
         fetch('https://gist.githubusercontent.com/YoannDelpierre/717050b63c62816cacf556d4d84669e4/raw/77fa776d025a1b189d9e65b4708596d93561f994/generated-customers.json')
         .then(response => response.json())
         .then(setClientsList);
     }, []);
 
-    let arraySt = clients.map(surfaces => 
+    const arraySt = clients.map(surfaces => 
         surfaces.search.surface
     );
 
    
-    let closestFromPropertySurface = arraySt.reduce((prev, curr) =>
+    const closestFromPropertySurface = arraySt.reduce((prev, curr) =>
         (Math.abs(curr - property.surface) < Math.abs(prev - property.surface) ? curr : prev),null
     );
 
